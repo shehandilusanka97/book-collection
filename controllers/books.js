@@ -35,6 +35,7 @@ export const getBook = (req, res) => {
 // delete book 
 export const deleteBook = (req, res) => {
   const { id } = req.params;
+  
   books = books.filter((book) => book.id !== id);
   res.send(`Book with the id ${id} deleted from the Database`);
 };
